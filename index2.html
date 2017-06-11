@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>task2</title>
+ <link rel = "stylesheet"
+   type = "text/css"
+   href = "accessible-modal-dialog.css" />
+<style>
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  h1#modalTitle {
+	font-size: 13px;
+}
+		.modal-close{
+			float: right;
+    right: 12px;
+		}
+  }
+</style>
+</head>
+
+<body>
+<main class="main" id="main" aria-label="Content" aria-hidden="false">
+<h1>Task 2 Venilla window modal with ESC functinlty</h1>
+
+<button data-modal-show="my-accessible-modal">view the modal window</button>
+<script src="accessible-modal-dialog.js"></script>
+<div class="modal" aria-hidden="true" id="my-accessible-modal">
+      <div class="modal-overlay" tabindex="-1" data-modal-hide></div>
+      <div class="modal-content" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+        <div role="document">
+          
+
+          <h1 id="modalTitle"><span class="txtalin">Ad Blocker: Setback or Spark for Innovation</span></h1>
+
+          <p style="color: rgb(150,150,150);margin-top: 60px;">In 2015, the industry lost 	staggering $22 billion in revenue due to ad blockers. Publishers are lamenting their losses. But users are annoyed enough
+		  at ads that they want to block them.  shouldn't advertisers be doing something different ?
+		  </p><p style="color: rgb(150,150,150);">
+		  this rough downturn could be the spark industry needs to disrupt the old 	paradigmas and create innovatie ads for a new digitial landscape
+		  </p>
+
+         
+           
+
+            <p style="float: right;color:#000;">
+              <a type="submit" name="button">Continue reading..</a>
+            </p>
+         
+
+          <button data-modal-hide class="modal-close" title="Close registration form" style="color:#fff;">&#x2573;</button>
+        </div>
+      </div>
+    </div>
+  <script>
+    (function () {
+      document.addEventListener('DOMContentLoaded', function () {
+        var modalEl = document.getElementById('my-accessible-modal');
+        var mainEl = document.getElementById('main');
+        var modal = new window.Modal(modalEl, mainEl);
+
+   
+      });
+    }());
+    </script>
+    </main>
+
+</body>
+</html>
